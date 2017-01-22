@@ -1,18 +1,17 @@
 language: node_js
 node_js:
-  - 'node'
+- node
 sudo: true
 env:
   global:
   - secure: AJsEWFnWC5W8hcF3hJzm3PT7heazJpKg85xiSvIWVzLHZU/s0h4+WfJ6t0F9v3L4awaowm62vy8CRaxRkB4lJyJg+JK2K0QN7lNFGj2f8Jx2cFlVJ1IyY959GY4iUg66JrNj1yzS02+yQfweDngyifqzb7IlxnowiveDjUO2gyo=
   - secure: hvihwLUqlPchrGFXKWFF7iKRugISU7r/gLBo6O63nPeg0OwnYqYcC2BnBWoSiOdu9oR5bM4a5u0os04XL+bP3dqt324g0uBTqvyyxD6NhBsphVFkUmdUH3HMe7IQY6JTns96KT/6UkQapKhIuW4CUDeidR+5NFKvyRdKIjSawS4=
-
-# For Electron testing on Linux
-# https://github.com/electron/electron/blob/master/docs/tutorial/testing-on-headless-ci.md
+  - secure: hjkjcLhKsafGkQoU0zrTHhDEeTrztCouOam5kUNYGMVbhPzLST9dVbY1KPo4iYb5SA5H8CcYZCaFCXIpWu/pde6mPuN6U7idOODrwfCqgaCNl4e3i5wow8KLYCqM7GrqP5FCgaoA4Ttmmz53HT8CRpUu9ajO6H5KySr1SapBbWHB0NqUm+kTF5A/MO8T9PtQV8T1ETXwkHL3DDVVrzmmKGCfLr88OUBUHYLa06caO4rNh0TkTxhfChtOZQ1kBiCOaF5f8AO6BwH0p0ksbQqfjJTu+8xD8oUkPbxMBSVMZUBWDADRt2nqvOhtCCJ2R7zMqlEykrrJoanmJNKliqAObh0HYQwBINndD4nNpgBcwK+bJWIQDX8X9J6VU68QF5DlQskgkPa/H4M/1vmymbyGe6twP+CC4/cWVfljUKpSLEJD5RzbC2js1AIcBW6t/xHqNkJky+bw5RjwNqOTbHeklhC1jQ5oScDkKjLITzcft2W1kpwcTJhRdWsdkREsQ9gK8n6pUkkPsM70jGpF/Pq2nRom0A2Yp9oJytT8SlEv9NYeUS1es7GW+BmF4n/73EY6/icPHxQeQZXcZ3clpS8c1s72aqk6MPs6RcAZMLt+CaQrMVDKHT3Xzuo+jHrBLWEd6EZa+Ro6//+W9ZdFEndQ6c/dztv5skGocEqmtYPmDTc=
+  - secure: i00x9P/Y02m1SbWIv3V8aQmtWLSDIT+LjoN77I0pcPqfuN7xOG1kLwFGvEYbXAAQ/EAtsGcc8NGb/d0C1iEqBxqGXyZAhWmmHU+N7iqrUH8pyrgBCDZ4UvMse9geyzSx5vFhOj4rXhYAY9sRUBMChiCfdcdB/IRRMobDQ3R/pVSWeUfrxCQqGwVjEOr45TeN7/pHUEHkAnPskFQwPrHb9qyxBHOLgik/2E2SmVbWfAaP+ryA4w4NSHHrnhuf2rwIuKD0YzCQT3hhCFLWd5s03kK7kOxdAdbP5AFNXhL11J68po2CrJMny58QV/pR/89ITicSwRm/drnv339iyNhCVO1/3liLbaXKp3OSrLHmmPU8jKLF5wQXkW1ra9OVGxUA/qqsN/qkPC3nHiUqsRedO868B5XFeEJVGT4CUh7L0c5LdhvoH+2DL7+RquLIhfeTzwlwm6hC03HApxFcrHFCuuY7qBpsdpadf9Kq+PcGmhP81vbk6aDwfDR2XKyO0hSEu6NOggWEEJf5zfRsMjCBkuzR++Etien0B0B5yLPl8UFxaepMr3ne02eujCKFQL8BrDwKocLeBAw53nYYZom+WDZzMrHr+cFeExAOXQ3wg6nX6412mDwfqseXYiP/Ao3NVlJ5idstlrr9MG2cPPR/tVkm84wGj8ZZq9OmCfO+IA4=
 addons:
   apt:
     packages:
-      - xvfb
+    - xvfb
 before_script:
-  - export DISPLAY=':99.0'
-  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
+- export DISPLAY=':99.0'
+- Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
